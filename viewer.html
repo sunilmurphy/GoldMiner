@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gold Miner Splash</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .logo {
+      width: 25vw;
+      max-width: 200px;
+      min-width: 200px;
+      margin-bottom: 10px;
+      animation: logoFade 2s ease-out forwards;
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    @keyframes logoFade {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .gold-text {
+      font-size: 8vw;
+      max-font-size: 50px;
+      color: transparent;
+      text-align: center;
+      background: linear-gradient(45deg, #FFD700, #FF8C00, #FFD700);
+      background-size: 400% 400%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 3s linear infinite;
+      margin: 0 0px;
+    }
+
+    @keyframes shine {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .coin {
+      position: absolute;
+      width: 6vw;
+      max-width: 30px;
+      height: 6vw;
+      max-height: 30px;
+      background: radial-gradient(circle, #ffd90034, #ffa6002c);
+      border-radius: 50%;
+      opacity: 0.8;
+      bottom: -40px;
+      /* start off-screen */
+      animation: fly 6s linear infinite;
+    }
+
+    /* Staggered coin delays and positions */
+    .coin1 {
+      left: 10%;
+      animation-delay: 0s;
+    }
+
+    .coin2 {
+      left: 30%;
+      animation-delay: 4s;
+    }
+
+    .coin3 {
+      left: 50%;
+      animation-delay: 1s;
+    }
+
+    .coin4 {
+      left: 70%;
+      animation-delay: 2s;
+    }
+
+    .coin5 {
+      left: 90%;
+      animation-delay: 3s;
+    }
+
+    @keyframes fly {
+      0% {
+        transform: translateY(0);
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-120vh);
+        /* flies upward out of view */
+        opacity: 0;
+      }
+    }
+
+
+    .progress-container {
+      position: absolute;
+      bottom: 50px;
+      width: 80%;
+      height: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(to right, #FFD700, #FFA500);
+      animation: progressAnim 15s linear forwards;
+    }
+
+    @keyframes progressAnim {
+      to {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Logo -->
+  <img src="logo.png" alt="Gold Miner Logo" class="logo" />
+
+  <!-- App Title -->
+  <h1 class="gold-text">Gold Miner</h1>
+
+  <!-- Animated Coins -->
+  <div class="coin coin1"></div>
+  <div class="coin coin2"></div>
+  <div class="coin coin3"></div>
+  <div class="coin coin4"></div>
+  <div class="coin coin5"></div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar"></div>
+  </div>
+
+</body>
+
+</html>
