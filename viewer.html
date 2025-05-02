@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gold Miner Splash</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gold Miner - Loading</title>
   <style>
     * {
       box-sizing: border-box;
@@ -14,164 +13,85 @@
       margin: 0;
       padding: 0;
       background-color: #000;
-      font-family: sans-serif;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
-      overflow: hidden;
-      position: relative;
     }
 
     .logo {
-      width: 25vw;
-      max-width: 200px;
-      min-width: 200px;
-      margin-bottom: 10px;
-      animation: logoFade 2s ease-out forwards;
-      opacity: 0;
-      transform: scale(0.8);
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
     }
 
-    @keyframes logoFade {
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
+    .title {
+      font-size: 30px;
+      color: gold;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px #444;
+      margin-bottom: 50px;
     }
-
-    .gold-text {
-      font-size: 8vw;
-      max-font-size: 50px;
-      color: transparent;
-      text-align: center;
-      background: linear-gradient(45deg, #FFD700, #FF8C00, #FFD700);
-      background-size: 400% 400%;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shine 3s linear infinite;
-      margin: 0 0px;
-    }
-
-    @keyframes shine {
-      0% {
-        background-position: 0% 50%;
-      }
-
-      50% {
-        background-position: 100% 50%;
-      }
-
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-
-    .coin {
-      position: absolute;
-      width: 6vw;
-      max-width: 30px;
-      height: 6vw;
-      max-height: 30px;
-      background: radial-gradient(circle, #ffd90034, #ffa6002c);
-      border-radius: 50%;
-      opacity: 0.8;
-      bottom: -40px;
-      /* start off-screen */
-      animation: fly 6s linear infinite;
-    }
-
-    /* Staggered coin delays and positions */
-    .coin1 {
-      left: 10%;
-      animation-delay: 0s;
-    }
-
-    .coin2 {
-      left: 30%;
-      animation-delay: 4s;
-    }
-
-    .coin3 {
-      left: 50%;
-      animation-delay: 1s;
-    }
-
-    .coin4 {
-      left: 70%;
-      animation-delay: 2s;
-    }
-
-    .coin5 {
-      left: 90%;
-      animation-delay: 3s;
-    }
-
-    @keyframes fly {
-      0% {
-        transform: translateY(0);
-        opacity: 0;
-      }
-
-      20% {
-        opacity: 1;
-      }
-
-      100% {
-        transform: translateY(-120vh);
-        /* flies upward out of view */
-        opacity: 0;
-      }
-    }
-
 
     .progress-container {
-      position: absolute;
-      bottom: 50px;
       width: 80%;
-      height: 10px;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 5px;
+      max-width: 300px;
+      background: #222;
+      border-radius: 30px;
       overflow: hidden;
+      height: 25px;
+      box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
     }
 
     .progress-bar {
       width: 0%;
       height: 100%;
-      background: linear-gradient(to right, #FFD700, #FFA500);
-      animation: progressAnim 15s linear forwards;
+      background: linear-gradient(90deg, #FFD700, #FFA500);
+      transition: width 0.1s linear;
     }
 
-    @keyframes progressAnim {
-      to {
-        width: 100%;
-      }
+    .percentage {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #bbb;
     }
   </style>
 </head>
-
 <body>
 
-  <!-- Logo -->
-  <img src="logo.png" alt="Gold Miner Logo" class="logo" />
+  <!-- Replace logo.png with your actual logo inside assets folder -->
+  <img src="logo.png" alt="Gold Miner Logo" class="logo">
+  <div class="title">Gold Miner</div>
 
-  <!-- App Title -->
-  <h1 class="gold-text">Gold Miner</h1>
-
-  <!-- Animated Coins -->
-  <div class="coin coin1"></div>
-  <div class="coin coin2"></div>
-  <div class="coin coin3"></div>
-  <div class="coin coin4"></div>
-  <div class="coin coin5"></div>
-
-  <!-- Progress Bar -->
   <div class="progress-container">
-    <div class="progress-bar"></div>
+    <div class="progress-bar" id="progressBar"></div>
   </div>
+  <div class="percentage" id="percentText">0%</div>
+
+  <script>
+    let percent = 0;
+    const duration = 10000; // 10 seconds
+    const stepTime = 100; // every 100ms
+    const totalSteps = duration / stepTime;
+
+    const progressBar = document.getElementById("progressBar");
+    const percentText = document.getElementById("percentText");
+
+    const interval = setInterval(() => {
+      percent++;
+      const progress = Math.min((percent / totalSteps) * 100, 100);
+      progressBar.style.width = progress + "%";
+      percentText.innerText = Math.floor(progress) + "%";
+
+      if (percent >= totalSteps) {
+        clearInterval(interval);
+        // Optional: you can notify Android using JS interface here
+      }
+    }, stepTime);
+  </script>
 
 </body>
-
 </html>
