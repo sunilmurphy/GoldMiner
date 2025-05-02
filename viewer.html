@@ -20,6 +20,7 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
+      position: relative;
     }
 
     .logo {
@@ -33,7 +34,15 @@
       color: gold;
       font-weight: bold;
       text-shadow: 1px 1px 2px #444;
-      margin-bottom: 50px;
+    }
+
+    .progress-wrapper {
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .progress-container {
@@ -54,8 +63,8 @@
     }
 
     .percentage {
-      margin-top: 15px;
-      font-size: 18px;
+      margin-top: 10px;
+      font-size: 16px;
       color: #bbb;
     }
   </style>
@@ -66,15 +75,17 @@
   <img src="logo.png" alt="Gold Miner Logo" class="logo">
   <div class="title">Gold Miner</div>
 
-  <div class="progress-container">
-    <div class="progress-bar" id="progressBar"></div>
+  <div class="progress-wrapper">
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <div class="percentage" id="percentText">0%</div>
   </div>
-  <div class="percentage" id="percentText">0%</div>
 
   <script>
     let percent = 0;
     const duration = 10000; // 10 seconds
-    const stepTime = 100; // every 100ms
+    const stepTime = 100; // update every 100ms
     const totalSteps = duration / stepTime;
 
     const progressBar = document.getElementById("progressBar");
@@ -88,7 +99,7 @@
 
       if (percent >= totalSteps) {
         clearInterval(interval);
-        // Optional: you can notify Android using JS interface here
+        // Optionally call Android method here
       }
     }, stepTime);
   </script>
