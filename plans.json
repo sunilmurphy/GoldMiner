@@ -1,0 +1,33 @@
+[
+  {
+    "title": "10x Boost",
+    "speedBoost": "+0.00001790 GM/sec",
+    "slotDuration": "+2:10:00 Slot",
+    "bonusInfo": "🎁 +5 Min Referral",
+    "price": "₹49",
+    "inAppKey": "boost_10x",
+    "isDefault": true
+  },
+  {
+    "title": "20x Boost",
+    "speedBoost": "+0.00003580 GM/sec",
+    "slotDuration": "+2:20:00 Slot",
+    "bonusInfo": "🎁 +10 Min Referral",
+    "price": "99",
+    "inAppKey": "boost_20x",
+    "isDefault": true
+  },
+  {
+    "title": "Holi Special 100x Boost",
+    "speedBoost": "+0.00020000 GM/sec",
+    "slotDuration": "+5:00:00 Slot",
+    "bonusInfo": "💥 +60 Min Holi Bonus",
+    "price": "₹299",
+    "inAppKey": "holi_100x",
+    "isBestValue": true,
+    "unlockThreshold": 50.0,
+    "dealEndTime": 1726500000000,
+    "tag": "Holi",
+    "isDefault": false
+  }
+]
