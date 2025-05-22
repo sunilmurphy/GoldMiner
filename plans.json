@@ -64,8 +64,8 @@
     "inAppKey": "plan_diwali_special",
     "isBestValue": true,
     "unlockThreshold": 100.0,
-    "dealEndTime": -1,
-    "startTime": 5,
+    "dealEndTime": 24,
+    "startTime": 1,
     "tag": "diwali_offer",
     "isDefault": false
   }
