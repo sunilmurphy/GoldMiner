@@ -8,8 +8,8 @@
     "inAppKey": "plan_10x_boost",
     "isBestValue": false,
     "unlockThreshold": 0.0,
-    "dealEndTime": null,
-    "startTime": null,
+    "dealEndTime": -1,
+    "startTime": -1,
     "tag": null,
     "isDefault": true
   },
@@ -22,8 +22,8 @@
     "inAppKey": "plan_20x_boost",
     "isBestValue": false,
     "unlockThreshold": 10.0,
-    "dealEndTime": null,
-    "startTime": null,
+    "dealEndTime": -1,
+    "startTime": -1,
     "tag": null,
     "isDefault": true
   },
@@ -37,7 +37,7 @@
     "isBestValue": true,
     "unlockThreshold": 25.0,
     "dealEndTime": 2,
-    "startTime": null,
+    "startTime": -1,
     "tag": null,
     "isDefault": true
   },
@@ -50,8 +50,8 @@
     "inAppKey": "plan_100x_boost",
     "isBestValue": true,
     "unlockThreshold": 50.0,
-    "dealEndTime": null,
-    "startTime": null,
+    "dealEndTime": -1,
+    "startTime": -1,
     "tag": null,
     "isDefault": true
   },
@@ -64,7 +64,7 @@
     "inAppKey": "plan_diwali_special",
     "isBestValue": true,
     "unlockThreshold": 100.0,
-    "dealEndTime": null,
+    "dealEndTime": -1,
     "startTime": 5,
     "tag": "diwali_offer",
     "isDefault": false
