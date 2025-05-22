@@ -9,7 +9,7 @@
     "isBestValue": false,
     "unlockThreshold": 0.0,
     "dealEndTime": -1,
-    "startTime": -1,
+    "startTime": "Active",
     "tag": null,
     "isDefault": true
   },
@@ -23,7 +23,7 @@
     "isBestValue": false,
     "unlockThreshold": 10.0,
     "dealEndTime": -1,
-    "startTime": -1,
+    "startTime": "Active",
     "tag": null,
     "isDefault": true
   },
@@ -37,7 +37,7 @@
     "isBestValue": true,
     "unlockThreshold": 25.0,
     "dealEndTime": 2,
-    "startTime": -1,
+    "startTime": "Active",
     "tag": null,
     "isDefault": true
   },
@@ -51,7 +51,7 @@
     "isBestValue": true,
     "unlockThreshold": 50.0,
     "dealEndTime": -1,
-    "startTime": -1,
+    "startTime": "Active",
     "tag": null,
     "isDefault": true
   },
@@ -65,7 +65,7 @@
     "isBestValue": true,
     "unlockThreshold": 100.0,
     "dealEndTime": 3,
-    "startTime": 1,
+    "startTime": "22-05-2025 16:30",
     "tag": "diwali_offer",
     "isDefault": false
   }
