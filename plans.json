@@ -28,20 +28,6 @@
     "isDefault": true
   },
   {
-    "title": "50x Boost",
-    "speedBoost": "+0.00008950 GM/sec",
-    "slotDuration": "+3:00:00 Slot",
-    "bonusInfo": "🔥 +20 Min Deal",
-    "price": "₹199",
-    "inAppKey": "plan_50x_boost",
-    "isBestValue": true,
-    "unlockThreshold": 25.0,
-    "dealEndTime": 2,
-    "startTime": "Active",
-    "tag": null,
-    "isDefault": true
-  },
-  {
     "title": "100x Boost",
     "speedBoost": "+0.00017900 GM/sec",
     "slotDuration": "+4:00:00 Slot",
