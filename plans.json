@@ -64,7 +64,7 @@
     "inAppKey": "plan_festival_special",
     "isBestValue": true,
     "unlockThreshold": 100.0,
-    "startTime": "10-06-2025",
+    "startTime": "09-06-2025",
     "validDays": 3,
     "offerType": "festival",
     "isDefault": false
