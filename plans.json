@@ -52,7 +52,7 @@
     "unlockThreshold": 50.0,
     "startTime": "Active",
     "validDays": 1,
-    "offerType": "special",
+    "offerType": null,
     "isDefault": false
   },
   {
@@ -66,7 +66,7 @@
     "unlockThreshold": 100.0,
     "startTime": "08-06-2025",
     "validDays": 3,
-    "offerType": "festival",
+    "offerType": null,
     "isDefault": false
   }
 ]
