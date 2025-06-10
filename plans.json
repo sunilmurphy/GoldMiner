@@ -38,7 +38,7 @@
     "unlockThreshold": 25.0,
     "startTime": "Active",
     "validDays": 0,
-    "offerType": null,
+    "offerType": "top",
     "isDefault": true
   },
   {
