@@ -45,15 +45,15 @@
     "title": "100x Boost",
     "speedBoost": "+0.00017900 GM/sec",
     "slotDuration": "+4:00:00 Slot",
-    "bonusInfo": "💥 +40 Min + Referral Bonus",
+    "bonusInfo": "⚡ 1-Day Only Discount",
     "price": "₹299",
     "inAppKey": "plan_100x_boost",
     "isBestValue": true,
     "unlockThreshold": 50.0,
     "startTime": "Active",
-    "validDays": 0,
+    "validDays": 1,
     "offerType": "special",
-    "isDefault": true
+    "isDefault": false
   },
   {
     "title": "Festival Mega Offer",
